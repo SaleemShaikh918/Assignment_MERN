@@ -1,28 +1,214 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>CSS Example</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tech Club</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
+
+        /* 5.4 CSS Variables */
+        :root {
+            --primary-color: #3159e8;
+            --background-color: #eef1ff;
+            --card-color: #ffffff;
+            --text-color: #222222;
+            --spacing: 30px;
+        }
+
+        /* Universal Selector */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
-            background-color: lightblue;
+            background-color: var(--background-color);
+            font-family: 'Roboto Slab', Georgia, serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 5px;
         }
 
-        h1 {
-            color: blue;
+        /* ID Selector */
+        #hero {
+            background-color: var(--primary-color);
+            color: white;
             text-align: center;
+            padding: 55px 20px;
+            border-radius: 20px;
+            margin-bottom: var(--spacing);
         }
 
-        p {
-            color: black;
-            font-size: 18px;
+        /* Element Selector */
+        h1 {
+            font-size: 60px;
+            margin-bottom: 10px;
         }
+
+        #hero p {
+            font-size: 25px;
+        }
+
+        /* Class Selector */
+        .card {
+            background-color: var(--card-color);
+            padding: var(--spacing);
+            border-radius: 20px;
+        }
+
+        h2 {
+            font-size: 38px;
+            margin-bottom: 20px;
+        }
+
+        /* Events Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 25px;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: left;
+            padding: 15px;
+        }
+
+        td {
+            padding: 17px 15px;
+            border-bottom: 2px solid #dddddd;
+        }
+
+        /* Register Section */
+        .register-card {
+            background-color: var(--card-color);
+            padding: var(--spacing);
+            border-radius: 20px;
+            margin-top: var(--spacing);
+        }
+
+        .register-card h2 {
+            font-size: 38px;
+            margin-bottom: 20px;
+        }
+
+        .register-card label {
+            font-size: 25px;
+        }
+
+        .register-card input {
+            width: 370px;
+            max-width: 100%;
+            padding: 12px;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .register-card button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 15px 35px;
+            font-size: 22px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
     </style>
 </head>
+
 <body>
 
-    <h1>Welcome to CSS</h1>
-    <p>This is my first CSS program.</p>
+    <!-- Header Section -->
+    <header id="hero">
+
+        <h1>Tech Club</h1>
+
+        <p>Learn. Code. Grow.</p>
+
+    </header>
+
+
+    <!-- Upcoming Events Section -->
+    <section class="card">
+
+        <h2>Upcoming Events</h2>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Event</th>
+                    <th>Date</th>
+                    <th>Venue</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>HTML Workshop</td>
+                    <td>12 Nov</td>
+                    <td>Lab 1</td>
+                </tr>
+
+                <tr>
+                    <td>Hackathon</td>
+                    <td>20 Nov</td>
+                    <td>Seminar Hall</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+
+    <!-- Register Section -->
+    <section class="register-card">
+
+        <h2>Register</h2>
+
+        <form>
+
+            <label for="name">Name:</label>
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Your name"
+                required
+            >
+
+            <br>
+
+            <label for="email">Email:</label>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="you@example.com"
+                required
+            >
+
+            <br>
+
+            <button type="submit">Register</button>
+
+        </form>
+
+    </section>
 
 </body>
 </html>
