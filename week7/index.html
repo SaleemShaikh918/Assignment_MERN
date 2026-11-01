@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flexbox Landing Page</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* 7.1 Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #222;
+            padding: 20px 40px;
+            color: white;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-links button {
+            background-color: orange;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* 7.2 Banner */
+        .banner {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: #2878b5;
+            color: white;
+            min-height: 300px;
+            padding: 30px;
+        }
+
+        .banner h1 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .banner p {
+            font-size: 18px;
+        }
+
+        /* 7.3 Cards */
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .card {
+            flex: 1 1 200px;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 8px #ccc;
+        }
+
+        .card h2 {
+            color: #2878b5;
+            margin-bottom: 10px;
+        }
+
+        /* 7.5 Responsive design */
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+                padding: 20px;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .banner h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">MyWebsite</div>
+
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+            <button>Register</button>
+        </div>
+    </nav>
+
+    <!-- Banner -->
+    <section class="banner">
+        <h1>Welcome to My Website</h1>
+        <p>Learn HTML, CSS and Web Development</p>
+    </section>
+
+    <!-- Cards -->
+    <section class="card-container">
+
+        <div class="card">
+            <h2>HTML</h2>
+            <p>HTML is used to create the structure of a website.</p>
+        </div>
+
+        <div class="card">
+            <h2>CSS</h2>
+            <p>CSS is used to style and design web pages.</p>
+        </div>
+
+        <div class="card">
+            <h2>JavaScript</h2>
+            <p>JavaScript makes websites interactive.</p>
+        </div>
+
+    </section>
+
+</body>
+</html>
