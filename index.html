@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Cards</title>
+
+    <style>
+        /* 6.1 Box sizing */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            line-height: 1.6;
+        }
+
+        /* 6.4 Sticky Top Bar */
+        .topbar {
+            background-color: #222;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 25px;
+            color: #222;
+        }
+
+        /* 6.2 Profile Cards */
+        .card {
+            width: 320px;
+            padding: 20px;
+            margin: 25px auto;
+            border: 2px solid #333;
+            border-radius: 15px;
+            text-align: center;
+            background-color: white;
+        }
+
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid white;
+            margin: 10px auto;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 35px;
+        }
+
+        .card h2 {
+            margin: 10px;
+        }
+
+        /* 6.3 Scrollable Bio */
+        .bio {
+            height: 100px;
+            overflow: auto;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #aaa;
+            text-align: left;
+        }
+
+        /* Two Colour Versions */
+        .blue-card {
+            border-color: blue;
+            background-color: #eaf3ff;
+        }
+
+        .blue-card .avatar {
+            background-color: #9bc5ff;
+        }
+
+        .green-card {
+            border-color: green;
+            background-color: #eaffea;
+        }
+
+        .green-card .avatar {
+            background-color: #9be5a5;
+        }
+
+        /* 6.4 Fixed Plus Button */
+        .add-btn {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 55px;
+            height: 55px;
+            border: none;
+            border-radius: 50%;
+            background-color: #007bff;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            z-index: 200;
+        }
+
+        /* 6.5 Clean Class Names */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #222;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Sticky Top Bar -->
+    <header class="topbar">
+        <h2>My Profile Website</h2>
+    </header>
+
+    <h1>Student Profile Cards</h1>
+
+    <!-- Blue Profile Card -->
+    <div class="card blue-card">
+        <div class="avatar">👨</div>
+        <h2>Mohammad saleem</h2>
+        <p>B.Tech Student</p>
+
+        <div class="bio">
+            Hello! My name is Mohammad saleem.
+            I am a B.Tech student. I am interested
+            in computers, programming, HTML, CSS
+            and Java. I enjoy learning new
+            technologies and developing websites.
+        </div>
+    </div>
+
+    <!-- Green Profile Card -->
+    <div class="card green-card">
+        <div class="avatar">👨‍💻</div>
+        <h2>Mohammad saleem.</h2>
+        <p>B.Tech Student</p>
+
+        <div class="bio">
+            Hello! My name is Mohammad saleem.
+            I am studying B.Tech. I like coding,
+            technology and computer science.
+            My goal is to become a software
+            developer and improve my skills.
+        </div>
+    </div>
+
+    <!-- Fixed Plus Button -->
+    <button class="add-btn">+</button>
+
+    <footer>
+        <p>My Profile Website | Assignment 6</p>
+    </footer>
+
+</body>
+</html>
